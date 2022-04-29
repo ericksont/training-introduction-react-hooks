@@ -1,11 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import cactusImg from '../../images/cactus.png';
-import jutsoSound from '../../sounds/jutso.mp3';
 import { Quotes } from '../../components';
 import { getQuote } from '../../services';
-
-const audio = new Audio(jutsoSound);
 
 export function App() {
   const isMounted = useRef(true);
@@ -19,7 +16,6 @@ export function App() {
 
     if (isMounted.current) {
       setQuote(resQuote);
-      audio.play();
     }
   };
 
